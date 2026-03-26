@@ -1,33 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React Element
-const element = <span>React element</span>
+const Header = () =>{
+    return(
+        <div className="header">
+            <div className="logo-container">
+                <img className="logo" src ="https://marketplace.canva.com/EAFaFUz4aKo/3/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-tn1zF-_cG9c.jpg"></img>
+            </div>
 
-const Title = (
-<h1 className="head" tabIndex="1">
-    {element}
-    Namaste React using JSX.
-    </h1>
-    );
- 
-// React Component
+            <div className="nav-item">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+            
+        </div>
+    )
+}
 
-const HeadingComponent = () => (       //Arrow function
-    <div id="conatainer">
-        {Title}
-  <h1 className="heading"> Namaste React functional component with arrow finction using JSX.</h1>
-  </div>
-);
-
-const Heading = function(){      //Normal funtion
- return (
-    <div id="conatainer">
-  <h1 className="heading"> Namaste React functional component with normal finction using JSX.</h1>
-  </div>
-);
-};
+const AppLayout = () =>{
+    return(
+        <div className="app">
+            <Header/>
+        </div>
+    )
+}
 
  const root =ReactDOM.createRoot(document.getElementById("root"));
- root.render(<HeadingComponent/>);
+ root.render(<AppLayout/>);
 
