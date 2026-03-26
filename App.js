@@ -2,20 +2,32 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // React Element
-const heading = (
-<h1 className="heading" tabIndex="1">
-    namste react using jsx
+const element = <span>React element</span>
+
+const Title = (
+<h1 className="head" tabIndex="1">
+    {element}
+    Namaste React using JSX.
     </h1>
     );
  
-    console.log(heading);
-    
- 
-// JSX - HTML-like or XML syntax
-const jsxheading = <h1> namste React using JSX</h1>
+// React Component
 
-console.log(jsxheading);
+const HeadingComponent = () => (       //Arrow function
+    <div id="conatainer">
+        {Title}
+  <h1 className="heading"> Namaste React functional component with arrow finction using JSX.</h1>
+  </div>
+);
 
+const Heading = function(){      //Normal funtion
+ return (
+    <div id="conatainer">
+  <h1 className="heading"> Namaste React functional component with normal finction using JSX.</h1>
+  </div>
+);
+};
 
  const root =ReactDOM.createRoot(document.getElementById("root"));
- root.render(heading);
+ root.render(<HeadingComponent/>);
+
